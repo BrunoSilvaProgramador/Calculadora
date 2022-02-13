@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0; 
+    word-wrap: break-word;
+    scrollbar-width: none !important;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+html, body{
+    height: 100%;
+}
+body{
+    display: flex;
+    align-items: center;
+    background-color: rgba(212, 212, 212, 0.295);
+    
+}
+.background{
+    width: 350px;
+    background-color: gray;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 12px;
+}
+
+.borda {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100.7%;
+    height: 100.6%;
+    border-radius: 12px;
+    background: linear-gradient(
+        to left,
+        rgb(44, 44, 44) 0%,
+        rgb(85, 85, 85) 8%,
+        rgb(85, 85, 85) 92%,
+        rgb(44, 44, 44) 100%
+        );
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.541);
+}
+.frente {
+    display: block;
+    position: relative;
+    padding: 5px 10px;
+    background: gray;
+    border-radius: 12px;
+    transform:translatey(-2px);
+}
+
+
+header{
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.767);
+    margin: 5px auto;
+    display: flex;
+    flex-direction: row-reverse;
+    color: rgb(255, 187, 0);
+    overflow-x: scroll;
+}
+main{
+    width: 100%;
+    padding: 10px 0 ;
+}
+.operadores{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+    margin: 10px 0;
+
+}
+.operadores button{
+    width: 25%;
+    border: none;
+    position: relative;
+    background: transparent;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+}
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+}
+   
+.edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+        to left,
+        hsl(340deg 100% 16%) 0%,
+        hsl(340deg 100% 32%) 8%,
+        hsl(340deg 100% 32%) 92%,
+        hsl(340deg 100% 16%) 100%
+        );
+}
+.front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: black;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform
+        600ms
+        cubic-bezier(.3, .7, .4, 1);
+}
+.gray {
+    background: linear-gradient(
+        to left,
+        rgb(75, 75, 75) 0%,
+        rgb(117, 117, 117) 8%,
+        rgb(117, 117, 117) 92%,
+        rgb(75, 75, 75) 100%
+        );
+}
+.fgray {
+    color: black;
+    background: rgb(190, 190, 190);
+}
+.purple {
+    background: linear-gradient(
+        to left,
+        rgb(55, 23, 107) 0%,
+        rgb(84, 49, 139) 8%,
+        rgb(84, 49, 139) 92%,
+        rgb(55, 23, 107) 100%
+        );
+}
+.fpurple {
+    color: black;
+    background: rgb(173, 136, 241);
+}
+
+.blue {
+    background: linear-gradient(
+        to left,
+        rgb(31, 23, 107) 0%,
+        rgb(49, 51, 139) 8%,
+        rgb(49, 51, 139) 92%,
+        rgb(31, 23, 107) 100%
+        );
+}
+.fblue {
+    color: black;
+    background: rgb(136, 143, 241);
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+button:hover .front {
+    transform: translateY(-6px);
+    transition: transform
+        250ms
+        cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+button:hover .shadow {
+    transform: translateY(4px);
+    transition: transform
+        250ms
+        cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+button:focus:not(:focus-visible) {
+    outline: none;
+}
+.operadores img{
+    width: 20px;
+    position: relative;
+    top: 3px;
+}
+
