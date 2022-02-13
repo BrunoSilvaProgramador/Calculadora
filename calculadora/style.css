@@ -53,15 +53,24 @@ body{
 
 header{
     width: 100%;
-    padding: 15px 10px;
-    font-size: 25px;
     background-color: rgba(0, 0, 0, 0.767);
     margin: 5px auto;
-    display: flex;
-    flex-direction: row-reverse;
-    color: rgb(255, 187, 0);
-    overflow-x: scroll;
 }
+header input{
+    width: 100%;
+    padding: 15px 10px;
+    background: transparent;
+    border: none;
+    color: rgb(255, 187, 0);
+    font-size: 25px;
+    text-align: right;
+}
+header input:focus{
+    outline: none;
+}
+
+
+
 main{
     width: 100%;
     padding: 10px 0 ;
