@@ -19,7 +19,7 @@ body{
 }
 .background{
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     background-color: gray;
     margin: 0 auto;
     position: relative;
@@ -59,11 +59,11 @@ header{
 }
 header input{
     width: 100%;
-    padding: 25px 10px;
+    padding: 30px 10px;
     background: transparent;
     border: none;
     color: rgb(255, 187, 0);
-    font-size: 25px;
+    font-size: 29px;
     text-align: right;
 }
 header input:focus{
@@ -80,8 +80,8 @@ main{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 7px;
-    margin: 10px 0;
+    gap: 15px;
+    margin: 15px 0;
 
 }
 .operadores button{
