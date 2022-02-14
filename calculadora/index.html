@@ -16,45 +16,22 @@
             </header>
             <main>
                 <section class="operadores">
-                    <button onclick="raiz_quadrada()">
-                        <span class="shadow"></span>
-                        <span class="edge"></span>
-                        <span class="front text">√</span>
-                    </button>
-                    <button onclick="pi()">
-                        <span class="shadow"></span>
-                        <span class="edge"></span>
-                        <span class="front text">π<span>                    
-                    </button>
-                    <button onclick="exponenciacao()">
-                        <span class="shadow"></span>
-                        <span class="edge"></span>
-                        <span class="front text">^<span>
-                    </button>
-                    <button onclick="fatorial()">
-                        <span class="shadow"></span>
-                        <span class="edge"></span>
-                        <span class="front text">!<span>
-                    </button>
-                </section><!--operadores-->
-    
-                <section class="operadores">
-                    <button onclick="ac()">
-                        <span class="shadow"></span>
-                        <span class="edge"></span>
-                        <span class="front text">AC</span>
-                    </button>
-                    <button onclick="parenteses()">
+                    <button onclick="mais(this)" value="+">
                         <span class="shadow"></span>
                         <span class="edge blue"></span>
-                        <span class="front fblue text">()<span>                    
+                        <span class="front fblue text">+<span>
                     </button>
-                    <button onclick="porcentagem()">
+                    <button onclick="menos(this)">
                         <span class="shadow"></span>
                         <span class="edge blue"></span>
-                        <span class="front fblue text">%<span>
+                        <span class="front fblue text">-<span>
                     </button>
-                    <button onclick="divisao()">
+                    <button onclick="multiplicacao(this)">
+                        <span class="shadow"></span>
+                        <span class="edge blue"></span>
+                        <span class="front fblue text">x<span>
+                    </button>
+                    <button onclick="divisao(this)">
                         <span class="shadow"></span>
                         <span class="edge blue"></span>
                         <span class="front fblue text">/<span>
@@ -76,11 +53,7 @@
                         <span class="edge gray"></span>
                         <span class="front fgray text">9<span>
                     </button>
-                    <button onclick="multiplicacao()">
-                        <span class="shadow"></span>
-                        <span class="edge blue"></span>
-                        <span class="front fblue text">x<span>
-                    </button>
+                    
                 </section><!--operadores-->
                 <section class="operadores">
                     <button onclick="quatro()">
@@ -98,11 +71,7 @@
                         <span class="edge gray"></span>
                         <span class="front fgray text">6<span>
                     </button>
-                    <button onclick="menos()">
-                        <span class="shadow"></span>
-                        <span class="edge blue"></span>
-                        <span class="front fblue text">-<span>
-                    </button>
+                    
                 </section><!--operadores-->
                 <section class="operadores">
                     <button onclick="um()">
@@ -120,11 +89,7 @@
                         <span class="edge gray"></span>
                         <span class="front fgray text">3<span>
                     </button>
-                    <button onclick="mais()">
-                        <span class="shadow"></span>
-                        <span class="edge blue"></span>
-                        <span class="front fblue text">+<span>
-                    </button>
+                    
                 </section><!--operadores-->
                 <section class="operadores">
                     <button onclick="zero()">
@@ -132,25 +97,22 @@
                         <span class="edge gray"></span>
                         <span class="front fgray text">0</span>
                     </button>
-                    <button onclick="virgula()">
-                        <span class="shadow"></span>
-                        <span class="edge gray"></span>
-                        <span class="front fgray text">,<span>                    
-                    </button>
-                    <button onclick="apagar()">
-                        <span class="shadow"></span>
-                        <span class="edge gray"></span>
-                        <span class="front fgray text"><img src="img/excluir.png" alt=""><span>
-                    </button>
                     <button onclick="igual()">
                         <span class="shadow"></span>
                         <span class="edge purple"></span>
                         <span class="front fpurple text">=<span>
                     </button>
+                    <button onclick="ac()">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front text">AC</span>
+                    </button>
+                    
                 </section><!--operadores-->
             </main>
         </span>
         
-    </div><!--background
+    </div><!--background-->
+    <script src="javascript.js"></script>
 </body>
 </html>
