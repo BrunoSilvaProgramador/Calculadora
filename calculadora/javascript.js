@@ -26,7 +26,7 @@ function divisao(){
 }
 
 
-
+// conta igual
 function igual(){
     var n1 = ''
     var n2 = ''
