@@ -11,30 +11,32 @@
     <div class="background">
         <span class="borda"></span>
         <span class="frente">
-            <header>
-                <input type="text" class="números">
-            </header>
+            <div class="screen">
+                <form class="header" name="header">
+                    <input type="text" name="text" readonly id="screen">
+                </form>
+            </div>
             <main>
                 <section class="operadores">
-                    <button onclick="mais()" value="+">
+                    <button onclick="ac()">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front text">AC</span>
+                    </button>
+                    <button onclick="del()">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front text">DEL</span>
+                    </button>
+                    <button onclick="exponencial()">
+                        <span class="shadow"></span>
+                        <span class="edge blue"></span>
+                        <span class="front fblue text">^<span>
+                    </button>
+                    <button onclick="mais()">
                         <span class="shadow"></span>
                         <span class="edge blue"></span>
                         <span class="front fblue text">+<span>
-                    </button>
-                    <button onclick="menos()">
-                        <span class="shadow"></span>
-                        <span class="edge blue"></span>
-                        <span class="front fblue text">-<span>
-                    </button>
-                    <button onclick="multiplicacao()">
-                        <span class="shadow"></span>
-                        <span class="edge blue"></span>
-                        <span class="front fblue text">x<span>
-                    </button>
-                    <button onclick="divisao()">
-                        <span class="shadow"></span>
-                        <span class="edge blue"></span>
-                        <span class="front fblue text">/<span>
                     </button>
                 </section><!--operadores-->
                 <section class="operadores">
@@ -53,6 +55,11 @@
                         <span class="edge gray"></span>
                         <span class="front fgray text">9<span>
                     </button>
+                    <button onclick="menos()">
+                        <span class="shadow"></span>
+                        <span class="edge blue"></span>
+                        <span class="front fblue text">-<span>
+                    </button>
                     
                 </section><!--operadores-->
                 <section class="operadores">
@@ -70,6 +77,11 @@
                         <span class="shadow"></span>
                         <span class="edge gray"></span>
                         <span class="front fgray text">6<span>
+                    </button>                   
+                    <button onclick="multiplicacao()">
+                        <span class="shadow"></span>
+                        <span class="edge blue"></span>
+                        <span class="front fblue text">x<span>
                     </button>
                     
                 </section><!--operadores-->
@@ -89,6 +101,11 @@
                         <span class="edge gray"></span>
                         <span class="front fgray text">3<span>
                     </button>
+                    <button onclick="divisao()">
+                        <span class="shadow"></span>
+                        <span class="edge blue"></span>
+                        <span class="front fblue text">/<span>
+                    </button>
                     
                 </section><!--operadores-->
                 <section class="operadores">
@@ -97,16 +114,22 @@
                         <span class="edge gray"></span>
                         <span class="front fgray text">0</span>
                     </button>
-                    <button onclick="igual()">
+                    <button onclick="parenteses_e()">
+                        <span class="shadow"></span>
+                        <span class="edge gray"></span>
+                        <span class="front fgray text">(<span>
+                    </button>
+                    <button onclick="parenteses_d()">
+                        <span class="shadow"></span>
+                        <span class="edge gray"></span>
+                        <span class="front fgray text">)<span>
+                    </button>
+                    <button onclick="document.header.text.value= eval(header.text.value)">
                         <span class="shadow"></span>
                         <span class="edge purple"></span>
                         <span class="front fpurple text">=<span>
                     </button>
-                    <button onclick="ac()">
-                        <span class="shadow"></span>
-                        <span class="edge"></span>
-                        <span class="front text">AC</span>
-                    </button>
+                    
                     
                 </section><!--operadores-->
             </main>

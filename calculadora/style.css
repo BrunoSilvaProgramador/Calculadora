@@ -52,18 +52,18 @@ body{
 }
 
 
-header{
+.header{
     width: 100%;
     background-color: rgba(0, 0, 0, 0.767);
     margin: 5px auto;
 }
-header input{
+.header input{
     width: 100%;
-    padding: 30px 10px;
+    padding: 35px 10px;
     background: transparent;
     border: none;
     color: rgb(255, 187, 0);
-    font-size: 29px;
+    font-size: 40px;
     text-align: right;
 }
 header input:focus{

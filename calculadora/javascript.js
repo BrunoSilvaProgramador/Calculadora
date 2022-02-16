@@ -1,112 +1,101 @@
-var tela = document.querySelector('input.números');
-var conta = [];
-var sit = [0];
-var operacao = [];
-var result = 0;
+var input = document.querySelector('input#screen');
 
 function mais(){
-    operacao[0] = '+';
-    tela.value += operacao;
-    conta.push('+')
+    var seg = input.value.length
+    if(input.value[seg-1] == '+' || input.value == ''){
+        alert('ERROR')
+    }else{
+        if(input.value[seg-1] == '-'){
+            if(input.value.length == 1){
+                alert('ERROR')
+                del()
+            }else{
+                del()
+                input.value += '+';
+            }          
+        }else{
+            input.value += '+';
+        }
+    }
 }
 function menos(){
-    operacao[0] = '-';
-    tela.value += operacao;
-    conta.push('-')
+    var seg = input.value.length
+    if(input.value[seg-1] == '-'){
+        alert('ERROR')
+    }else{
+        if(input.value[seg-1] == '+'){
+            del()
+            input.value += '-';
+        }else{
+            input.value += '-';
+        }
+    }
 }
 function multiplicacao(){
-    operacao[0] = '*';
-    tela.value += 'x';
-    conta.push('*')
+    var seg = input.value.length
+    if(input.value[seg-1] == '*' && input.value[seg-2] == '*'){
+        del()
+    }else if(input.value[seg-1] == '*' || input.value == '' || input.value[seg-1] == '-' || input.value[seg-1] == '+'){
+        alert('ERROR');
+    }else{
+        if(input.value[seg-1] == '/'){
+            del()
+            input.value += '*';
+        }else{
+            input.value += '*';
+        }
+    }
 }
 function divisao(){
-    operacao[0] = '/';
-    tela.value += operacao;
-    conta.push('/')
-}
-
-
-// conta igual
-function igual(){
-    var n1 = ''
-    var n2 = ''
-    if(operacao[0] == '+'){
-        if(sit[0] == 0){
-            for(var i = 0; i <= conta.length; i++){
-                if(conta[i] == '+'){
-                    var s = 2
-                }else{
-                    if(s == 2){
-                        n2 = n2 + conta[i] 
-                    }else{
-                        n1 = n1 + conta[i]
-                    }
-                    s=1
-                }
-            }
-            result += Number(n1) + Number(n2);
-            alert(result)
-            sit[0] = 1
-            conta = []
+    var seg = input.value.length
+    if(input.value[seg-1] == '*' && input.value[seg-2] == '*'){
+        del()
+        del()
+        input.value += '/';
+    }else if(input.value[seg-1] == '/' || input.value == '' || input.value[seg-1] == '-' || input.value[seg-1] == '+'){
+        alert('ERROR')
+    }else{
+        if(input.value[seg-1] == '*' || input.value[seg-1] == '*' && input.value[seg-2] == '*'){
+            del()
+            input.value += '/';
         }else{
-            for(var i = 0; i <= conta.length; i++){
-                if(conta[i] == '+'){
-                    var s = 2
-                }else{
-                    if(s == 2){
-                        n1 = conta[i] 
-                    }
-                    s=1
-                }
-            }
-            result += Number(n1);
-            alert(result)
-        }
-    
-    }else if(operacao[0] == '-'){ 
-        if(sit[0] == 0){
-            result += conta[0] - conta[1];
-            alert(result)
-            sit[0] = 1
-        }else{
-            result -= conta[0];
-            alert(result)
-        }
-    }else if(operacao[0] == '*'){
-        if(sit[0] == 0){
-            result += conta[0] * conta[1];
-            alert(result)
-            sit[0] = 1
-        }else{
-            result *= conta[0];
-            alert(result)
-        }
-    
-    }else if(operacao[0] == '/'){
-        if(sit[0] == 0){
-            result += conta[0] / conta[1];
-            alert(result)
-            sit[0] = 1
-        }else{
-            result /= conta[0];
-            alert(result)
+            input.value += '/';
         }
     }
-    
 }
-
-function sete(){
-    tela.value += '7';
-    if(conta[0] == ''){
-        conta.push('8')
+function exponencial(){
+    var seg = input.value.length
+    if(input.value[seg-1] == '*' && input.value[seg-2] == '*' || input.value == '' || input.value[seg-1] == '-' || input.value[seg-1] == '+'){
+        alert('ERROR')
+    }else{
+        if(input.value[seg-1] == '*'){
+            input.value += '*';
+        }else if(input.value[seg-1] == '/'){
+            del()
+            input.value += '**';
+        }
+        else{
+            input.value += '**';
+        }
     }
-
-
 }
-function oito(){
-    tela.value += '8';
-    if(conta[0] == ''){
-        conta.push('8')
-    }
+function parenteses_e(){input.value += '(';}
+function parenteses_d(){input.value += ')';}
+function ac(){input.value = '';}
 
+const del = () =>{
+    let deletar = input.value;
+    document.getElementById('screen').value = deletar.substr(0,deletar.length-1);
 }
+
+
+function nove(){input.value += '9';}
+function oito(){input.value += '8';}
+function sete(){input.value += '7';}
+function seis(){input.value += '6';}
+function cinco(){input.value += '5';}
+function quatro(){input.value += '4';}
+function tres(){input.value += '3';}
+function dois(){input.value += '2';}
+function um(){input.value += '1';}
+function zero(){input.value += '0';}
