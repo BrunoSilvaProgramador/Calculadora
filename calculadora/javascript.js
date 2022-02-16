@@ -1,4 +1,4 @@
-var input = document.querySelector('input#screen');
+var input = document.querySelector('input#tela');
 
 function mais(){
     var seg = input.value.length
@@ -85,7 +85,7 @@ function ac(){input.value = '';}
 
 const del = () =>{
     let deletar = input.value;
-    document.getElementById('screen').value = deletar.substr(0,deletar.length-1);
+    document.getElementById('tela').value = deletar.substr(0,deletar.length-1);
 }
 
 
