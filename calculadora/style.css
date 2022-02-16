@@ -4,6 +4,12 @@
     word-wrap: break-word;
     scrollbar-width: none !important;
     box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 ::-webkit-scrollbar{
     display: none;
@@ -14,13 +20,14 @@ html, body{
 body{
     display: flex;
     align-items: center;
-    background-color: rgba(212, 212, 212, 0.295);
+    background-image: url('imagens/background.jpg');
+    background-size: cover;
+    background-position: center;
     
 }
 .background{
     width: 100%;
-    max-width: 400px;
-    background-color: gray;
+    max-width: 410px;
     margin: 0 auto;
     position: relative;
     border-radius: 12px;
@@ -46,7 +53,9 @@ body{
     display: block;
     position: relative;
     padding: 5px 10px;
-    background: gray;
+    background-image: url('imagens/cinza.jpg');
+    background-size: cover;
+    background-position: center;
     border-radius: 12px;
     transform:translatey(-2px);
 }
@@ -54,8 +63,9 @@ body{
 
 .header{
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.767);
+    background-color: rgba(0, 0, 0);
     margin: 5px auto;
+    border-radius: 5px;
 }
 .header input{
     width: 100%;
@@ -65,8 +75,9 @@ body{
     color: rgb(255, 187, 0);
     font-size: 40px;
     text-align: right;
+
 }
-header input:focus{
+.header input:focus{
     outline: none;
 }
 

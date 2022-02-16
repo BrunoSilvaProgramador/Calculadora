@@ -2,7 +2,7 @@ var input = document.querySelector('input#tela');
 
 function mais(){
     var seg = input.value.length
-    if(input.value[seg-1] == '+' || input.value == ''){
+    if(input.value[seg-1] == '+' || input.value == '' || input.value[seg-1] == '*' && input.value[seg-2] == '*'){
         alert('ERROR')
     }else{
         if(input.value[seg-1] == '-'){
@@ -10,8 +10,12 @@ function mais(){
                 alert('ERROR')
                 del()
             }else{
-                del()
-                input.value += '+';
+                if(input.value[seg-2] == '*' && input.value[seg-3] == '*'){
+                    alert('ERROR');
+                }else{
+                    del()
+                    input.value += '+';
+                }                
             }          
         }else{
             input.value += '+';
@@ -99,3 +103,8 @@ function tres(){input.value += '3';}
 function dois(){input.value += '2';}
 function um(){input.value += '1';}
 function zero(){input.value += '0';}
+
+
+function igual(){
+    input.value = eval(input.value)
+}
